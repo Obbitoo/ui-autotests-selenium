@@ -2,7 +2,7 @@ from selenium.common.exceptions import NoSuchElementException
 
 class BasePage():
 
-    def __init__(self, browser, url, timeout):
+    def __init__(self, browser, url, timeout=10):
         """Создание объекта веб клиента"""
         self.browser = browser
         self.url = url
