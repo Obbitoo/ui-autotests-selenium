@@ -22,3 +22,7 @@ class ProductPage(BasePage):
 
     def product_name_in_basket(self):
         return self.element_text(*ProductPageLocators.PRODUCT_NAME_IN_BASKET)
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
